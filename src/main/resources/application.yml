@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: loan
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/firstloan
+    username: postgres
+    password: Ravi1995@
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+jwt:
+  secret: mysecretkeymysecretkeymysecretkey
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
