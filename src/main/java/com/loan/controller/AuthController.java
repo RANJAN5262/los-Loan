@@ -53,4 +53,14 @@ public class AuthController {
 
         return ResponseEntity.ok(response);
     }
+    @DeleteMapping("/delete/{email}")
+    public ResponseEntity<String> deleteUser(
+            @PathVariable String email) {
+
+        User existingUser = userRepository.findByEmail(email);
+
+        userRepository.delete(existingUser);
+
+        return ResponseEntity.ok("User Deleted Successfully");
+    }
 }
